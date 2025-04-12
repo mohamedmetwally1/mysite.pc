@@ -1,0 +1,656 @@
+:root{
+    --Mainbackground: #0D0D0D;
+    --Secondarybackground:#1A1A1A;
+    --Maintext: #FFFFFF;
+    --Secondarytext:#bfbfbf7c;
+    --Accentcolor:#7bf3f3;
+    --Warningcolor: #ea70a1;
+    --padding: 8%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+html{
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 16px;
+    color: var(--Maintext);
+    scroll-behavior: smooth;
+}
+
+.home{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--Mainbackground);
+    display: flex;
+    flex-direction: column;
+}
+
+span{
+    color: var(--Accentcolor);
+}
+
+h2{
+    font-size: 2.2rem;
+    letter-spacing: 0.12rem;
+    cursor: pointer;
+}
+
+nav{
+    padding: 2.8rem var(--padding) 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0.8rem 1.5rem;
+}
+
+nav ul li a{
+    color: var(--Maintext);
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.4s;
+    border-color: #00FFFF;
+}
+
+nav ul li a:hover{
+    color: var(--Secondarybackground);
+    padding: 5px 15px;
+    border-radius: 15px;
+    background-color: var(--Accentcolor);
+}
+
+.content {
+    flex-grow: 1;
+    padding: 0 var(--padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-texts {
+    width: 50%;
+}
+
+h1{
+    font-size: 4.45rem;
+    margin: 1.7rem 0;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+h4{
+    color: var(--Warningcolor);
+    font-size: 1.25rem;
+    letter-spacing: 0.12rem;
+}
+
+.social{
+    margin-top: 3.5rem;
+}
+
+.social img{
+    margin-right: 2rem;
+    width: 2.5rem;
+}
+
+.social img:hover{
+    transform: scale(1.2);
+    transition: .4s;
+}
+
+.home .container-images {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    overflow: visible;
+}
+
+.home .container-images .shape {
+    position: absolute;
+    width: 170%;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.4s;
+}
+
+.home .container-images .mypic {
+    position: absolute;
+    width: 90%;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.4s;
+}
+
+.home .container-images:hover .shape {
+    transform: translate(-50%, -49%);
+}
+
+.home .container-images:hover .mypic {
+    transform: translate(-49%, -50%);
+}
+
+/* ....................................................
+................................................about section 
+....................................................*/
+
+.about {
+    background-color: var(--Secondarybackground);
+    padding: 2rem var(--padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about .container-images {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .container-images img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.about .about-text {
+    width: 55%;
+    color: var(--Mainbackground);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.about .about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.about .about-text p {
+    font-size: 2rem; 
+    line-height: 1.8;
+}
+
+p{
+    margin-top: 20px;
+    color: var(--Warningcolor);
+    letter-spacing: 1px;
+    line-height: 1.7rem;
+    font-size: 1.1rem;
+}
+
+h5{
+    font-size: 1.37rem;
+    letter-spacing: 2px;
+}
+
+/* ....................................................
+................................................my servies section 
+....................................................*/
+
+.services{
+    background-color: var(--Mainbackground);
+    padding: 2rem var(--padding);
+}
+
+.text_center{
+    text-align: center;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;  /* مسافة بين الكروت */
+    gap: 20px;  /* مسافة بين الكروت */
+    padding: 20px;
+}
+
+.card {
+    width: 30%;  /* عرض الكارت */
+    padding: 25px;
+    border-radius: 10px;
+    background-color: var(--Secondarybackground); /* خلفية فاتحة داخل الكارت */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* الظل حول الكارت */
+    text-align: center;
+    transition: all 0.3s ease; /* تأثير حركة عند التفاعل مع الكارت */
+    height: 350px; /* زيادة طول الكارت */
+}
+
+.card:hover {
+    background-color: var(--Accentcolor); /* تغيير اللون عند المرور بالفأرة */
+    transform: translateY(-5px); /* رفع الكارت قليلاً عند المرور بالفأرة */
+}
+
+.card img {
+    width: 50px;  /* تصغير حجم الصورة */
+    height: 50px;
+    margin-bottom: 30px;  /* زيادة المسافة بين الصورة والنص */
+}
+
+.card h5 {
+    font-size: 1.5rem;  /* تقليص حجم العنوان */
+    margin-bottom: 40px;  /* زيادة المسافة بين العنوان والنص */
+    letter-spacing: 2px;
+}
+
+.card p {
+    font-size: 1rem;
+    color: var(--Warningcolor);
+    line-height: 1.6;
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
+/* Skills Section */
+.skills {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--Secondarybackground);
+}
+
+.skills-header h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: left;
+    color: var(--Maintext);
+}
+
+.skills-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 2rem;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 skills per row */
+    gap: 1.5rem;
+    width: 65%;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #703333;
+    padding: 1rem;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    height: 150px; /* Adjust the height of each skill box */
+}
+
+.skill:hover {
+    transform: scale(1.05);
+}
+
+.skill img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1rem;
+}
+
+.skill h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    color: var(--Maintext);
+}
+
+.cv-image {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75%;
+}
+
+.cv-image img {
+    width: 200%;
+    max-width: 450px; /* Adjust the max width of the CV image */
+    height: auto;
+    object-fit: contain;
+}
+
+/* ....................................................
+............................................... Explanations section 
+....................................................*/
+
+.explanations {
+    background-color: var(--Mainbackground);
+    padding: 3rem var(--padding);
+}
+
+.explanations-header h2 {
+    font-size: 2.5rem;
+    color: var(--Maintext);
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.explanations-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+/* Books Already Explained */
+.book-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.book {
+    width: 45%; /* Increase the width to better fit content */
+    background-color: var(--Secondarybackground);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    position: relative; /* Required for absolute positioning of button */
+}
+
+.book:hover {
+    transform: scale(1.05);
+}
+
+/* Image of the book */
+.book-info img {
+    width: 100%;
+    height: 300px; /* تحديد ارتفاع الصورة */
+    object-fit: contain;  /* عرض الصورة كاملة بدون قص */
+    border-radius: 12px 12px 0 0;
+}
+
+/* Box with the book info */
+.book-box {
+    background-color: var(--Secondarybackground);
+    padding: 1.5rem;
+    border-radius: 0 0 12px 12px;
+    position: relative; /* Make box position relative for absolute button */
+}
+
+.book-box h4 {
+    font-size: 2rem;
+    color: var(--Maintext);
+    margin: 2rem .5rem;
+}
+
+.book-box p {
+    font-size: 1rem;
+    color: var(--Warningcolor);
+    margin: 2rem .5rem;
+}
+
+.watch-link, .soon-link {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.4s ease;
+    position: absolute;
+    bottom: 1rem; /* Positioning the button at the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Watch Link Button */
+.watch-link {
+    background-color: var(--Accentcolor);
+    color: var(--Mainbackground);
+}
+
+.watch-link:hover {
+    background-color: var(--Warningcolor);
+}
+
+/* Soon Link Button */
+.soon-link {
+    background-color: var(--InfoColor); /* Different color for Soon button */
+    color: var(--Mainbackground);
+}
+
+.soon-link:hover {
+    background-color: var(--Warningcolor);
+}
+
+/* Soon to be Explained Books */
+.soon-books {
+    text-align: center;
+}
+
+.soon-books h3 {
+    font-size: 2rem;
+    color: var(--Maintext);
+    margin-bottom: 1.5rem;
+}
+
+.soon-books .book-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.soon-books .book {
+    width: 23%; /* Adjust width to fit 4 books in a row */
+    background-color: var(--Secondarybackground);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Position for button */
+}
+
+.soon-books .book-info img {
+    width: 100%;
+    height: 300px; /* تحديد ارتفاع الصورة */
+    object-fit: contain;
+    border-radius: 12px 12px 0 0;
+}
+
+.soon-books .book-info h4 {
+    font-size: 1.6rem;
+    color: var(--Maintext);
+    margin-bottom: 1rem;
+}
+
+.soon-books .book-info p {
+    font-size: 1rem;
+    color: var(--Secondarytext);
+}
+
+.soon-link {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.4s ease;
+    position: absolute;
+    bottom: 1rem; /* Positioning the button at the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Watch Link Button */
+.soon-link {
+    background-color: var(--Warningcolor);
+    color: var(--Mainbackground);
+}
+
+.soon-link:hover {
+    background-color: var(--Warningcolor);
+}
+
+/* ....................................................
+................................................ Contact Section
+....................................................*/
+
+.contact-me {
+    background-color: var(--Secondarybackground);
+    padding: 3rem var(--padding);
+    text-align: center;
+}
+
+.contact-header h2 {
+    font-size: 2.5rem;
+    color: var(--Maintext);
+    margin-bottom: 1rem;
+}
+
+.contact-header p {
+    font-size: 1.2rem;
+    color: var(--Secondarytext);
+    margin-bottom: 2rem;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--Secondarybackground);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+    font-size: 1.2rem;
+    color: var(--Maintext);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--Accentcolor);
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    padding: 1rem 2rem;
+    background-color: var(--Accentcolor);
+    color: var(--Mainbackground);
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+}
+
+.contact-form button:hover {
+    background-color: var(--Warningcolor);
+}
+
+/* تنسيق الزر */
+.scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--Secondarytext); /* اللون الأخضر */
+    color: var(--Accentcolor);
+    border: none;
+    padding: 15px;
+    border-radius: 40%;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    opacity: 0; /* يبدأ الزر غير مرئي */
+    transition: opacity 0.5s ease-in-out;
+    z-index: 1000;
+}
+
+/* إظهار الزر عند التمرير */
+body {
+    min-height: 2000px; /* لجعل الصفحة طويلة للاختبار */
+}
+
+/* إظهار الزر عندما يتم التمرير لأسفل */
+.scrollToTop {
+    opacity: 1;
+}
+
+/* عند التمرير لأسفل يظهر الزر */
+.scrollToTop:hover {
+    background-color: #517c53;
+}
+
+html {
+    scroll-behavior: smooth; /* يجعل التمرير انسيابيًا */
+}
+
+/* ....................................................
+................................................ menu 
+....................................................*/
+nav ul.is-active {
+    display: block; /* أو أي خاصية تريد تفعيلها */
+}
+
+#menu {
+    display: none; /* في البداية مخفي */
+}
+
+#menu {
+    display: none;
+    position: relative;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    user-select: none;
+}
+
+#menu span{
+    display: block;
+    width: 33px;
+    height: 4px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    transform-origin: 0 0;
+    transition: 0.4s;
+    margin-bottom: 5px;
+}
+
+
